@@ -1,5 +1,5 @@
 # UIAssignment
 
-SASS run command to generate CSS
+#SASS run command to generate CSS
 
-sass --watch scss/custom.scss:css/style.min.css --style compressed
+#sass --watch scss/custom.scss:css/style.min.css --style compressed
