@@ -12,28 +12,28 @@
 </head>
 
 <body>
-	<header class="d-flex align-items-center justify-content-between">
+	<header class="d-flex align-items-center justify-content-between"  role="banner">
 		<div class="d-flex align-items-center">
 			<span class="mob-show icon-menu toggle-menu mr-3"></span>
-			<a href="/" class="brand-name">acme</a>
+			<a href="/" title="Logo" class="brand-name">acme</a>
 		</div>
 		<div class="header-right d-flex align-items-center justify-content-between">
-			<a href="#" class="btn btn-blue-outline add-btn"><span class="icon-plus mr-3"></span> Add Project</a>
+			<a href="#" title="Add Project" class="btn btn-blue-outline add-btn"><span class="icon-plus mr-3"></span> Add Project</a>
 			<div class="user-profile">
-				<a href="#" class="d-flex align-items-center">
+				<a href="#" title="User name" class="d-flex align-items-center">
 					<span class="user-name hide-mob">Pranav C</span>
-					<span class="user-img d-flex align-items-center justify-content-center"><span class="icon-user"></span></span>
+					<span class="user-img alt="User Avatar" d-flex align-items-center justify-content-center"><span class="icon-user"></span></span>
 				</a>
 			</div>
 		</div>
 	</header>
-	<section class="row pt-85">
-		<aside class="left-navigation">
-			<div class="search-box">
-				<input type="search" placeholder="Search for Projects here..." class="search-textbox" />
+	<main class="row pt-85">
+		<aside class="left-navigation"  role="complementary">
+			<div class="search-box" role="search">
+				<input type="search" placeholder="Search for Projects here..." class="search-textbox"  aria-label="Search for Projects here"/>
 				<span class="icon-search"></span>
 			</div>
-			<nav class="navbar">
+			<nav class="navbar" role="navigation">
 				<h4>Projects</h4>
 				<a><span>Name</span><span>Due Date</span></a>
 				<a href="#" class="active" title="Swimming Pool"><span>Swimming Pool</span><span>24 Mar</span></a>
@@ -64,9 +64,9 @@
 					<div class="card-header">
 						<span class="card-title">4 users selected</span>
 						<div class="action-btns">
-							<a href="#" class="action-link hide-mob">hold</a>
-							<a href="#" class="action-link hide-mob">Delete</a>
-							<a href="#" class="btn btn-blue-outline add-btn"><span class="icon-plus mr-3"></span>Add
+							<a href="#" title="hold" class="action-link hide-mob">hold</a>
+							<a href="#" title="delete" class="action-link hide-mob">Delete</a>
+							<a href="#" title="add user" class="btn btn-blue-outline add-btn"><span class="icon-plus mr-3"></span>Add
 								User</a>
 						</div>
 					</div>
@@ -96,7 +96,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -124,7 +124,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -152,7 +152,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -180,7 +180,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -208,7 +208,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -236,7 +236,7 @@
 									</th>
 									<td class="name">
 										<div class="d-flex align-items-center">
-											<img
+											<img alt="User Avatar"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAFVklEQVRYhe2XbUxTVxjH//el9LalvW3DewtSC8sKEwoFQUARhYgyotuSGZds0W2Z22K2ZFmMZmZ+WPZlm8Z9msnm5pJtbi6Z2ZjRxIjoFHAgjPJSFZCKkNAWKH1/vffuA5mJxsTeMvaS8P94n+c5/1/Oec495wArWtGK/t8iljpAUdHWshSF7HVGqjQTJCWhaKkiHJy7FY0GBq2qwGF0dMT/FUCTaX22XKX7TMXqitOzSwoejsfjYWH6btf1aGT+Qn/PL+8n60MlW5izynys0NS6S6HM0j4qTpI0odYa9CQlMSPu/Mntnp37xwBLK3d8kKOv3MMwLAMAkbAHXGQGiDnAx+YQi/nB8QRomgEjVTM80MymMudcrql5sV50MoDyFHatis1lEZ+CITMCS7EORYVrwSoVAACPL4CR0UncGB7HhEOKHH11odd992kAx8R6iZ7BNebm3ek680tShlXoNTPY/1oL8nMzoZAzoGkKNE1BIWeQn5uJmvJCDIyMwBdNR8DvyNCo+JMul4sT40eKBaRpaZWKzUsPh92oseQ/Nr96TS5iUS9YrWF1KIQs0X5iCxhGWwEAlOBCQa4RHZ398AeCyMzQwlxcCAD4Y3gUDuc8UhVyGA06kHwvWDaPVWoMbwDDB5cVUIBAAIA8hYNKqYBGrURWhhbTDhdIYrFjvP4ACgx6RKIxaFklUqgYYkn+0UQDRkLzQzP3ui2e+UGcbU8FI5WC4zgIgoBQOAwBgHvBB483AIqicHP8LkZGriJFZo95/fZTYv1E92A8OtNYVybnDPo07GzdjKqyInTeGML2Leux770j2HfoKHY0b0AsHgdFENjZuhnGvHTUW9JIVqY8s+yATAqNt19+jmreWA0AsI3a4V7wgqYobGuqRUtjDWiKwvW+YcR5HgCwpb4K+998gZbQlESsn+glJmlydHLaqZPJpPB4/WioKUdDTTkcs26kqVUQIMA5u4Cjh98CAHi8fsjkUkxOO0FSGF92QK/b/+35S11Ve3a2yE79fAFqVgWO48DzPJ5p3ggAOHO+AyRJgqIoLHh82LW9ESe+/zXoXQh8I9ZP9NbS69fJNFqu/d29u6q3NlQnVHPuUjc+OX6qy+dzbrLb7WExfqJ7cGqqK+TxBb4KhSMPfPcHQjjd1o7Tbe3wB0IPxELhCDz+wEmxcECSZzEpkLf6B2+7n91ar4lzHOJxDqkKGZ5v3XQ/JxyJLh59FIU+6203Bf5mMl5JAdrtg1d+H0gd7+4fLq8oNZGdvYPw+oP34wRBQKmQYcO6MnT1jfA9VtvYxITtt2S8kr6wGo0lGSqV/PqH+/euqih98pHj9AzYhEMffW73+cJVY2P9rmR8kr6wut2OAMOwP3T2DTY5Zt1ac3EhJZEsLkgwFManX/4Y/eK7tqGFBV/DnTtWZ7I+SS3xX7Lbh2d4as0rs27P+YvXetNiscWblERCYdbt8c55/a9OTgw5luKxJMD8fFO1MlVx3GwqlLc21j0QC4Yicqtt4gjJmQ7Y7bbuZD1E96CuoESfrda8Q5Dk7lydUbnK8BQNPgapRIBEQkCj1iAaB1RqHZwuFwatl7l7U3Y/Af7rqbm5j6fHrFPLAmixWCQMo/2GpqXbKyqbpCZTBaQpTEK1kWgYNlsvensuRGKx6JnOlOiLiT5HEwasWtd4pay0vq62dtuS3tJXr50VBqyXO7o7L256fHaCJ8nqJ0o267JX1SwVDgDqaluIrIz8DUZjaUMi+QkB6jN1By0VTUn/kh5WRWUTlaPLPpBIbkK7OBAM6traToRJYskTCADgBQGxaCTvbxlsRSta0X9cfwIkgQSeLdHuUQAAAABJRU5ErkJggg==" />
 											Alexander Horan
 										</div>
@@ -267,16 +267,16 @@
 				<span class="icon-arrow"></span>
 			</div>
 			<div class="more-infoBox other-info">
-				<p><span>Due Date : <strong>24th March 2018</strong></span><a href="#"><span class="icon-pencil"></span></a></p>
+				<p><span>Due Date : <strong>24th March 2018</strong></span><a href="#" title="Edit"><span class="icon-pencil"></span></a></p>
 				<p><span>Source Type: <strong>Map</strong></span></p>
 				<p>QA File | PDF</p>
-				<a href="#" class="pdf-bar">
+				<a href="#" title="PDF" class="pdf-bar">
 					<span class="icon-pdf pdf-icon"></span>
 					<span class="pdf-name">PDF-Lorem Ipsum is simply</span>
 				</a>
 			</div>
 		</div>
-	</section>
+	</main>
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
