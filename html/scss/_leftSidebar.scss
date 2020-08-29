@@ -1,0 +1,99 @@
+.left-navigation {
+ min-width: $leftNav;
+ max-width: $leftNav;
+ @include position($pos: fixed, $left: 0, $zi: 3);
+ @include box-shadow(3px, 4px, 5px, $gray-200);
+ height: 100%;
+ overflow-y: auto;
+ background: $white;
+ .search-box {
+  @include position($pos: relative);
+  padding: 12px 0 7px;
+  @include border(bottom, 2px, solid, $gray-200);
+  .search-textbox {
+   padding-left: 4.2rem;
+   padding-right: 1rem;
+   width: 100%;
+   outline: 0;
+   border: 0;
+   height: 45px;
+   font-size: 1rem;
+   color: $gray-300;
+   &::placeholder {
+    font-size: 1rem;
+    color: $gray-300;
+   }
+  }
+  .icon-search {
+   @include position($pos: absolute, $left: 1.875rem, $top: 1.563rem);
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+  }
+ }
+ .navbar {
+  padding: 2rem 0 1rem 0;
+  h4 {
+   color: $gray-400;
+   letter-spacing: 1px;
+   margin-bottom: 1rem;
+   padding-left: 2rem;
+  }
+  a {
+   @include flexbox;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.65rem 1.5rem 0.65rem 2rem;
+   &.active {
+    span {
+     font-weight: $fw500;
+     font-size: 1.05rem;
+     &:nth-child(1) {
+      &::before {
+       width: 5px !important;
+       height: 100% !important;
+       background: #3f79f6;
+       content: "";
+       @include position($pos: absolute, $left: 0, $top: 0);
+      }
+     }
+    }
+   }
+   &:nth-of-type(1) {
+    span {
+     font-weight: $fw500;
+    }
+   }
+   &:hover {
+    background: $linkHover;
+   }
+   span {
+    color: $gray-400;
+    padding: 0.25rem 0;
+    &:nth-child(1) {
+     padding-left: 1rem;
+     @include position($pos: relative);
+    }
+    &:nth-child(2) {
+     font-size: 0.9rem;
+    }
+   }
+  }
+ }
+}
+
+@media (max-width: $breakpoint-mob) {
+ .left-navigation {
+  left: -$leftNav;
+  @include transition(left 0.3s linear);
+  box-shadow: none;
+  &.navshow {
+   left: 0;
+   @include box-shadow(3px, 4px, 5px, $gray-200);
+  }
+ }
+
+ .wrapper {
+  margin-left: 0;
+ }
+}

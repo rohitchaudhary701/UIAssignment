@@ -1,0 +1,58 @@
+header {
+  @include box-shadow(0, 3px, 5px, $gray-200);
+  padding: 1.3rem 2rem;
+  @include position($pos:fixed, $zi:5);
+  width: 100%;
+  background: $white;
+  @media (max-width: $breakpoint-mob){
+    padding: 1.3rem 0.7rem;
+  }
+  .icon-menu, .icon-close{
+    display: none;
+    @media (max-width: $breakpoint-mob){
+      display: block;
+      min-width: 25px;
+      width: 25px;
+      height: 25px;
+      background-size: cover;
+      
+    }
+  }
+  .brand-name {
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: $fw600;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+  }
+  .header-right {
+    @include position($pos:relative, $zi:3);
+  }
+  .user {
+    &-profile {
+      margin-left: 2rem;
+      @media (max-width: $breakpoint-mob){
+        margin-left: 1rem;
+      }
+      .user-img {
+        @include border-radius(50%);
+        @include border(all, 1px, solid, $gray-200);
+        width: 42px;
+        height: 42px;
+        
+        .icon-user {
+          margin-bottom: 4px;
+          width: 26px;
+          height: 24px;
+          background-size: cover;
+          display: inline-block;
+        }
+      }
+    }
+    &-name {
+      color: $blue;
+      font-size: 1.1rem;
+      margin-right: 2rem;
+    }
+  }
+}
